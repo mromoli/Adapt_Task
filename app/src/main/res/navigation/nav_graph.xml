@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mobile_navigation"
+        app:startDestination="@id/newsListFragment">
+        <fragment
+            android:id="@+id/newsListFragment"
+            android:name="com.example.adapt.view.NewsListFragment"
+            android:label="Homepage"
+            tools:layout="@layout/fragment_news_list">
+            <action
+                android:id="@+id/action_repoListFragment_to_repoDetailFragment"
+                app:destination="@id/repoDetailFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/repoDetailFragment"
+            android:name="com.example.adapt.view.NewsDetailFragment">
+            <argument
+                android:name="url"
+                android:defaultValue="https://newsapi.org/"
+                app:argType="string" />
+            <argument
+                android:name="source"
+                android:defaultValue="https://newsapi.org/"
+                app:argType="string" />
+        </fragment>
+</navigation>
